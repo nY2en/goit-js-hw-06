@@ -6,15 +6,15 @@ const refs = {
 
 let counterValue = 0;
 
-refs.btnIncr.addEventListener('click', Increment);
-refs.btnDecr.addEventListener('click', decrement);
+refs.btnIncr.addEventListener('click', onBtnIncrement);
+refs.btnDecr.addEventListener('click', onBtnDecrement);
 
-function Increment() {
+function onBtnIncrement() {
     counterValue += 1;
     refs.value.textContent = counterValue;
 }
 
-function decrement() {
+function onBtnDecrement() {
     counterValue -= 1;
     refs.value.textContent = counterValue;
 }
