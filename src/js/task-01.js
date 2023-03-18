@@ -6,8 +6,7 @@ console.log(`Number of categories: ${numberOfCategories}`);
 
 const categoriesTypes = [...categoriesRef.children].forEach(type => {
     const categoryType = type.firstElementChild.textContent;
-    const numberOfElements =
-        type.firstElementChild.nextElementSibling.children.length;
+    const numberOfElements = type.lastElementChild.children.length;
 
     console.log(`\nCategory: ${categoryType} \nElements: ${numberOfElements}`);
 });
