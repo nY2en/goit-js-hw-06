@@ -11,19 +11,15 @@ const refs = {
     boxes: document.querySelector('#boxes'),
 };
 
-refs.input.addEventListener('change', onInputChange);
 refs.createBtn.addEventListener('click', onCreateBtnClick);
 refs.destroyBtn.addEventListener('click', onDestroyBtnClick);
 
-function onInputChange(event) {
-    createBlocks(event.currentTarget.value);
-}
-
 function onCreateBtnClick() {
+    createBlocks(refs.input.value);
 }
 
 function onDestroyBtnClick() {
-    refs.boxes.innerHTML = '';
+    destroyBoxes();
 }
 
 function createBlocks(number) {
@@ -38,4 +34,8 @@ function createBlocks(number) {
         length += 10;
     }
     boxes.append(...blocks);
+}
+
+function destroyBoxes() {
+    refs.boxes.innerHTML = '';
 }
